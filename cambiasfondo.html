@@ -1,67 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <style>
-  p{
-  color:black;
-  font-size :20px;
-  }
-  </style>
- 
-  </head>
-  <body>
-
-
-<h1></h1>
-
-<button type="button" onclick="myFunction()">Cambia Colore Sfondo</button>
-
-<script>
-function myFunction() {
-  document.body.style.backgroundColor = "red";
-}
-</script>
-  <p id="demo">----</p>
- 
-  <button onclick="myStopFunction()">Stop time</button>
- 
-  <script>
-  const myInterval = setInterval(pippo, 1000);
-  let contatore=0;
- 
-  function pippo() {
-  contatore++;
-  document.getElementById("demo").innerHTML = contatore +" ";
-  }
- 
-  function myStopFunction() {
-     clearInterval(myInterval);
-     }
-     </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
-    <h2>codice test per i giochi basasti sui tempi</h2>
+ <style>
+     #div{
+         background-color:rgb(4, 128, 0);
+         width :200px;
+         height:  200px;
+         border: 1px solid black;
+        } 
+        
+        
+.button {
+  background-color: #2785d1; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
 
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+</head>
+
+ </style>
+     
+ 
+</head>
+  <body>
+    <div id="div">
+   
     <p id="demo">
-      Questa pagina conta quanto tempo ci metti a premere il bottone
+      Questa pagina conta quanto tempo ci metti a premere il bottone e cambia colore delllo sfondo
     </p>
-    <p id="out">........0.0</p>
+    <p id="out">0.0</p>
     <p id="nclick">0</p>
-    <button type="button" onclick="count()">Invia</button>
+    
+    
+
+    <button class="button button1"onclick="count()">cliccami</button>
+
+    
+    </div>
+   
     <script>
       let i = 0;
       let start = Date.now();
       let counter = 0;
+     
+
+      
       function count() {
         document.getElementById("out").innerHTML +=
           " " + (Date.now() - start) + " ms";
         counter++;
         document.getElementById("nclick").innerHTML = counter.toString();
-      }
+       
+        document.getElementById("div").style.backgroundColor = "red";
+    
+    }
     </script>
   </body>
 </html>
