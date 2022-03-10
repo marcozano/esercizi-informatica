@@ -1,1 +1,35 @@
-3eded
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<div class id="esercizio"></div>
+<div class id="esercizio1"></div>
+<div class id="esercizio2"></div>
+<script>
+
+let array = [[],[],[]];
+
+for(let i=0; i<10; i++){
+array[0].push(parseInt(Math.random()*10));
+}
+for(let i=0; i<array[0].length; i++){
+array[1].push(parseInt(Math.random()*10));
+}
+
+for(let i=0; i<array[1].length; i++){
+array[2].push(parseInt(Math.random()*10));
+}
+
+document.getElementById("esercizio").innerHTML = array[0] [2];
+document.getElementById("esercizio1").innerHTML = array[1] [2];
+document.getElementById("esercizio2").innerHTML = array[2] [2];
+
+
+</script>
+</body>
+</html>
