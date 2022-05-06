@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
 
+    <button id="miobottone" onclick="generaPrimi();">NUMERO PIU' VICINO ALLA MERDA</button>
+
+    <input id="mioInput" type="text" value="840">
+    <br>
+    <button id="miobottone" onclick="calcola();">CALCOLA FATTORI MERDOSI</button>
+     
+    <p id="out"></p>
+    <script>
+       function calcola()
+       {          let n= document.getElementById("mioInput").value;
+                   document.getElementById("out").innerHTML=fattorizzatore(n);
+
+       }
+       
+
+   function fattorizzatore(n)
+   {  let stringaFattori="";
+      let fineciclo=n/2;
+      for(let fattore=1; fattore<=fineciclo;fattore++)
+        {
+             if (n%fattore==0)
+                 {  stringaFattori=stringaFattori+ fattore+" JUVE MERDA SCHIFOSA!!! <br>";
+                 }
+
+
+        }
+    return  stringaFattori;
+
+   }
+
+   function generaPrimi(){
+       let lhotrovato=false;
+     for(let i=840; (i<=1000  && !(lhotrovato));i++)
+     {
+        if (isPrime(i))
+        {
+            document.write("<span>"+i+"</span><br>");
+            lhotrovato=true;
+        }
+     }
+        }
+
+function isPrime(n) {
+    let primo=true;
+    for(let fattore=2;(fattore<=n/2    );fattore++)
+    {
+    if(n%fattore==0)
+{
+    primo=false;
+}
+}
+return primo;
+}
+    </script>
+   
+</body>
+</html>
